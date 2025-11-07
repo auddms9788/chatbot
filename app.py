@@ -4,11 +4,11 @@ from google.genai import types
 
 # --- 1. 앱 설정 ---
 st.set_page_config(
-    page_title="💖 감정 시/노래 AI 챗봇",
+    page_title=" 감정 시/노래 AI 챗봇",
     layout="centered",
     initial_sidebar_state="expanded"
 )
-st.title("💖 감정 시/노래 AI 챗봇")
+st.title(" 감정 시/노래 AI 챗봇")
 st.subheader("당신의 감정을 시와 노래로 표현해 드립니다.")
 
 # --- 2. 비밀키 설정 및 클라이언트 초기화 ---
@@ -20,7 +20,7 @@ def get_gemini_client():
     # 2. Secrets에 키가 없으면, 사용자에게 직접 입력받기
     if not api_key:
         with st.sidebar:
-            st.warning("⚠️ Streamlit Secrets(`GEMINI_API_KEY`)가 설정되지 
+            st.warning(" Streamlit Secrets(`GEMINI_API_KEY`)가 설정되지 
 않았습니다.")
             api_key = st.text_input("Gemini API Key를 입력하세요:", 
 type="password")
@@ -46,7 +46,7 @@ AVAILABLE_MODELS = [
 ]
 
 with st.sidebar:
-    st.header("⚙️ 설정")
+    st.header(" 설정")
     selected_model = st.selectbox(
         "기반 모델 선택:",
         options=AVAILABLE_MODELS,
@@ -91,7 +91,7 @@ SYSTEM_PROMPT = """
 **'무기력한 불안감'**의 핵심일까요?
 
 **[생성 결과]**
-### 🌿 무제 (시)
+###  무제 (시)
 
 창밖은 햇살인데
 내 안은 짙은 안개 같아
